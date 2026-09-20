@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/HomePage/Hero";
+import Books from "./Components/HomePage/Books";
 
 export default function Home() {
 
@@ -7,7 +8,9 @@ export default function Home() {
   return (
     
    <>
-     hello
+    
+    <Hero/>
+    <Books/>
    </>
   );
 }
