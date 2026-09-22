@@ -70,7 +70,7 @@ const BookCard = ({book} : BooksProps ) => {
                 </div>
 
                 <Link
-                  href={`/books/${book.bookId}`}
+                  href={`/Books/${book.bookId}`}
                   className="btn btn-primary btn-sm rounded-full px-5"
                 >
                   View Details

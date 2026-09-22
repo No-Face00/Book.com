@@ -2,7 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BookCard from "./BookCard";
+
+
+import BookCard from "../Components/HomePage/BookCard";
 import { Book } from "@/BookType/BookType";
 
 const getBooks = async (): Promise<Book[]> => {
@@ -20,13 +22,13 @@ const Books = async () => {
 
   return (
     <section className="container mx-auto px-4 py-12">
-      <div className="mb-10">
+      <div className="mb-10 ">
         <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
           Explore Collection
         </p>
 
         <h2 className="text-3xl font-extrabold sm:text-4xl">
-          Popular Books
+          All Books
         </h2>
 
         <p className="mt-2 text-base text-base-content/60">
@@ -35,10 +37,7 @@ const Books = async () => {
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {bookData
-          .filter((book) => book.rating > 4.5)
-          .slice(0, 8)
-          .map((book, ind) => 
+        {bookData.map((book, ind) => 
             {
                 return <BookCard key={ind} book = {book}/> 
             }
