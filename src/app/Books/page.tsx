@@ -35,7 +35,7 @@ const Books = async () => {
           Discover your next favorite book.
         </p>
       </div>
-
+           
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {bookData.map((book, ind) => 
             {

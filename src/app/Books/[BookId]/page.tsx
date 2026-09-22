@@ -1,3 +1,5 @@
+import Listen from '@/app/Components/BookDetails/Listen';
+import Wishlist from '@/app/Components/BookDetails/Wishlist';
 import { Book } from '@/BookType/BookType';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -78,13 +80,9 @@ const BookDetails = async ({params}: IdBooksDetailsProps) => {
                 {book.tags.map((tag) => <span key={tag} className="rounded-full border border-primary/20 px-3 py-1 text-xs font-semibold text-primary">#{tag}</span>)}
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-                <button type="button" className="btn btn-primary rounded-full px-6 font-semibold shadow-md shadow-primary/20">
-                  Listen
-                </button>
-                <button type="button" className="btn btn-outline rounded-full px-6 font-semibold">
-                  Wishlist
-                </button>
+              <div className="mt-8  flex justify-end flex-wrap gap-3">
+                <Listen book ={book}/>
+                <Wishlist book ={book} />
               </div>
             </div>
           </div>
