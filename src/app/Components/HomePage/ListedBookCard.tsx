@@ -10,7 +10,8 @@ interface BooksProps {
 
 const ListedBookCard = ({ book }: BooksProps) => {
   return (
-    <article className="group flex w-full overflow-hidden rounded-2xl border border-base-200 bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div className="pb-3">
+   <article className="group flex  w-full overflow-hidden rounded-2xl border border-base-200 bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       
       {/* Book Image */}
       <div className="relative h-[280px] w-[190px] shrink-0 overflow-hidden bg-base-200 sm:h-[320px] sm:w-[220px]">
@@ -90,6 +91,9 @@ const ListedBookCard = ({ book }: BooksProps) => {
         </div>
       </div>
     </article>
+
+    </div>
+ 
   );
 };
 
