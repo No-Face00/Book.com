@@ -74,26 +74,7 @@ const Navbar = () => {
         </Link>
       </li>
 
-      {/* Pages to Read */}
-      <li>
-        <Link
-          href="/PagesToRead"
-          className={`relative rounded-full px-4 py-2 font-medium transition-all duration-300 ${
-            pathname === "/PagesToRead"
-              ? "text-primary"
-              : "hover:bg-primary/10 hover:text-primary"
-          }`}
-        >
-          Pages to Read
-
-          {/* Active Effect */}
-          <span
-            className={`absolute bottom-0 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary transition-all duration-300 ${
-              pathname === "/PagesToRead" ? "w-7" : "w-0"
-            }`}
-          />
-        </Link>
-      </li>
+     
     </>
   );
 
